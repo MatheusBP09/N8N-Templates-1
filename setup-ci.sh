@@ -14,13 +14,19 @@ echo "Creating Python virtual environment..."
 python3 -m venv venv
 source venv/bin/activate
 
+# Get the directory of this script
+SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+LIB_DIR="${SCRIPT_DIR}/lib"
+
 # Install dependencies
 echo "Installing dependencies..."
 pip install --upgrade pip
-cd lib
+
+# Change to lib directory and install the package
+pushd "$LIB_DIR" > /dev/null
 pip install -r requirements.txt
 pip install -e .
-cd ..
+popd > /dev/null
 
 echo ""
 echo "✅ Setup complete!"
@@ -36,8 +42,11 @@ echo "  cd lib && n8n-visualize ../path/to/workflow.json && cd .."
 # Run validation if this is a CI environment
 if [ "$CI" = "true" ]; then
     echo "Running in CI environment. Validating workflows..."
-    cd lib
-    n8n-validate ..
+    pushd "$LIB_DIR" > /dev/null
+    if ! n8n-validate ..; then
+        echo "❌ Workflow validation failed"
+        exit 1
+    fi
     echo "✅ All workflows are valid!"
-    cd ..
+    popd > /dev/null
 fi
