@@ -1,11 +1,12 @@
-# Real_Estate Templates
-- **lead_scoring_with_mls_data.json** – pinecone/openai/huggingface
-- **rental_price_estimator.json** – supabase/cohere/anthropic
-- **neighborhood_safety_insights.json** – redis/huggingface/anthropic
-- **mortgage_rate_alert.json** – pinecone/openai/huggingface
-- **property_description_generator.json** – supabase/huggingface/huggingface
-- **tenant_screening_summary.json** – pinecone/cohere/huggingface
-- **open_house_reminder.json** – supabase/cohere/openai
-- **real_estate_market_trend_report.json** – weaviate/cohere/anthropic
-- **hoa_fee_analyzer.json** – weaviate/huggingface/anthropic
-- **zoning_regulation_checker.json** – redis/openai/huggingface
+# Real Estate Templates
+
+- **hoa_fee_analyzer.json**: This workflow analyzes HOA fees. It uses a webhook to trigger the workflow, splits the text, creates embeddings using Hugging Face, and stores them in Weaviate. It then uses an Anthropic chat model to analyze the fees and appends the results to a Google Sheet.
+- **lead_scoring_with_mls_data.json**: This workflow scores leads with MLS data. It uses a webhook to trigger the workflow, splits the text, creates embeddings using OpenAI, and stores them in Pinecone. It then uses a Hugging Face chat model to score the leads and appends the results to a Google Sheet.
+- **mortgage_rate_alert.json**: This workflow sends mortgage rate alerts. It uses a webhook to trigger the workflow, splits the text, creates embeddings using OpenAI, and stores them in Pinecone. It then uses a Hugging Face chat model to send the alerts and appends the results to a Google Sheet.
+- **neighborhood_safety_insights.json**: This workflow provides neighborhood safety insights. It uses a webhook to trigger the workflow, splits the text, creates embeddings using Hugging Face, and stores them in Redis. It then uses an Anthropic chat model to provide the insights and appends the results to a Google Sheet.
+- **open_house_reminder.json**: This workflow sends open house reminders. It uses a webhook to trigger the workflow, splits the text, creates embeddings using Cohere, and stores them in Supabase. It then uses an OpenAI chat model to send the reminders and appends the results to a Google Sheet.
+- **property_description_generator.json**: This workflow generates property descriptions. It uses a webhook to trigger the workflow, splits the text, creates embeddings using Hugging Face, and stores them in Supabase. It then uses a Hugging Face chat model to generate the descriptions and appends the results to a Google Sheet.
+- **real_estate_market_trend_report.json**: This workflow generates real estate market trend reports. It uses a webhook to trigger the workflow, splits the text, creates embeddings using Cohere, and stores them in Weaviate. It then uses an Anthropic chat model to generate the reports and appends the results to a Google Sheet.
+- **rental_price_estimator.json**: This workflow estimates rental prices. It uses a webhook to trigger the workflow, splits the text, creates embeddings using Cohere, and stores them in Supabase. It then uses an Anthropic chat model to estimate the prices and appends the results to a Google Sheet.
+- **tenant_screening_summary.json**: This workflow summarizes tenant screenings. It uses a webhook to trigger the workflow, splits the text, creates embeddings using Cohere, and stores them in Pinecone. It then uses a Hugging Face chat model to summarize the screenings and appends the results to a Google Sheet.
+- **zoning_regulation_checker.json**: This workflow checks zoning regulations. It uses a webhook to trigger the workflow, splits the text, creates embeddings using OpenAI, and stores them in Redis. It then uses a Hugging Face chat model to check the regulations and appends the results to a Google Sheet.

@@ -1,11 +1,12 @@
 # Manufacturing Templates
-- **machine_downtime_predictor.json** – weaviate/openai/anthropic
-- **inventory_restock_forecast.json** – supabase/cohere/anthropic
-- **quality_defect_classifier.json** – redis/openai/anthropic
-- **safety_incident_alert.json** – redis/huggingface/huggingface
-- **production_kpi_dashboard.json** – weaviate/cohere/openai
-- **supply_chain_delay_monitor.json** – supabase/cohere/openai
-- **maintenance_ticket_router.json** – supabase/cohere/huggingface
-- **shift_handover_summary.json** – supabase/huggingface/huggingface
-- **mes_log_analyzer.json** – weaviate/huggingface/openai
-- **packaging_waste_calculator.json** – redis/openai/anthropic
+
+- **inventory_restock_forecast.json**: This workflow forecasts inventory restock. It uses a webhook to trigger the workflow, splits the text, creates embeddings using Cohere, and stores them in Supabase. It then uses an Anthropic chat model to forecast the restock and appends the results to a Google Sheet.
+- **machine_downtime_predictor.json**: This workflow predicts machine downtime. It uses a webhook to trigger the workflow, splits the text, creates embeddings using OpenAI, and stores them in Weaviate. It then uses an Anthropic chat model to predict the downtime and appends the results to a Google Sheet.
+- **maintenance_ticket_router.json**: This workflow routes maintenance tickets. It uses a webhook to trigger the workflow, splits the text, creates embeddings using Cohere, and stores them in Supabase. It then uses a Hugging Face chat model to route the tickets and appends the results to a Google Sheet.
+- **mes_log_analyzer.json**: This workflow analyzes MES logs. It uses a webhook to trigger the workflow, splits the text, creates embeddings using Hugging Face, and stores them in Weaviate. It then uses an OpenAI chat model to analyze the logs and appends the results to a Google Sheet.
+- **packaging_waste_calculator.json**: This workflow calculates packaging waste. It uses a webhook to trigger the workflow, splits the text, creates embeddings using OpenAI, and stores them in Redis. It then uses an Anthropic chat model to calculate the waste and appends the results to a Google Sheet.
+- **production_kpi_dashboard.json**: This workflow creates a production KPI dashboard. It uses a webhook to trigger the workflow, splits the text, creates embeddings using Cohere, and stores them in Weaviate. It then uses an OpenAI chat model to create the dashboard and appends the results to a Google Sheet.
+- **quality_defect_classifier.json**: This workflow classifies quality defects. It uses a webhook to trigger the workflow, splits the text, creates embeddings using OpenAI, and stores them in Redis. It then uses an Anthropic chat model to classify the defects and appends the results to a Google Sheet.
+- **safety_incident_alert.json**: This workflow sends alerts for safety incidents. It uses a webhook to trigger the workflow, splits the text, creates embeddings using Hugging Face, and stores them in Redis. It then uses a Hugging Face chat model to send the alerts and appends the results to a Google Sheet.
+- **shift_handover_summary.json**: This workflow summarizes shift handovers. It uses a webhook to trigger the workflow, splits the text, creates embeddings using Hugging Face, and stores them in Supabase. It then uses a Hugging Face chat model to summarize the handovers and appends the results to a Google Sheet.
+- **supply_chain_delay_monitor.json**: This workflow monitors supply chain delays. It uses a webhook to trigger the workflow, splits the text, creates embeddings using Cohere, and stores them in Supabase. It then uses an OpenAI chat model to monitor the delays and appends the results to a Google Sheet.

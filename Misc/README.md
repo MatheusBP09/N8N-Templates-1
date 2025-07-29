@@ -1,50 +1,50 @@
-# Misc Templates
+# Miscellaneous Templates
 
-- **customer_auto-tagging.json** – Uses Cohere Embeddings, OpenAI Chat, Pinecone
-- **etsy_review_to_slack.json** – Uses OpenAI Chat, OpenAI Embeddings, Supabase Vector
-- **price_update_google_sheet.json** – Uses Cohere Embeddings, OpenAI Chat
-- **return_ticket_assignment.json** – Uses Cohere Embeddings, OpenAI Chat, Supabase Vector
-- **order_shipped_notification.json** – Uses Anthropic Claude, OpenAI Embeddings, Supabase Vector
-- **woo_order_mailchimp.json** – Uses Cohere Embeddings, OpenAI Chat
-- **low_stock_discord.json** – Uses Anthropic Claude, OpenAI Embeddings, Pinecone
-- **notion_api_update.json** – Uses Anthropic Claude, OpenAI Embeddings, Supabase Vector
-- **csv_attachment_to_airtable.json** – Uses Anthropic Claude, Cohere Embeddings, Pinecone
-- **ga_report_email.json** – Uses OpenAI Chat, OpenAI Embeddings, Pinecone
-- **rss_headlines_slack.json** – Uses Cohere Embeddings, OpenAI Chat, Pinecone
-- **keyword_rank_checker.json** – Uses Cohere Embeddings, OpenAI Chat, Pinecone
-- **api_stats_chart.json** – Uses Anthropic Claude, OpenAI Embeddings, Pinecone
-- **json_to_sheet.json** – Uses OpenAI Chat, OpenAI Embeddings, Pinecone
-- **server_health_grafana.json** – Uses Anthropic Claude, Cohere Embeddings
-- **hourly_weather_log.json** – Uses Cohere Embeddings, OpenAI Chat, Pinecone
-- **course_completion_certificate.json** – Uses OpenAI Chat, OpenAI Embeddings, Supabase Vector
-- **zoom_attendance_log.json** – Uses Anthropic Claude, OpenAI Embeddings, Supabase Vector
-- **assignment_sms_reminder.json** – Uses Cohere Embeddings, OpenAI Chat
-- **interview_scheduler.json** – Uses OpenAI Chat, OpenAI Embeddings
-- **onboarding_checklist_slack.json** – Uses Anthropic Claude, OpenAI Embeddings, Supabase Vector
-- **applicant_feedback_folder.json** – Uses Anthropic Claude, OpenAI Embeddings, Pinecone
-- **medication_sms_reminder.json** – Uses Anthropic Claude, Cohere Embeddings, Supabase Vector
-- **fitness_api_weekly_report.json** – Uses Cohere Embeddings, OpenAI Chat, Supabase Vector
-- **crm_patient_intake.json** – Uses Anthropic Claude, OpenAI Embeddings
-- **blood_test_email_alert.json** – Uses Anthropic Claude, OpenAI Embeddings, Supabase Vector
-- **api_monitor_auto_restart.json** – Uses OpenAI Chat, OpenAI Embeddings
-- **cron_success_slack.json** – Uses Anthropic Claude, OpenAI Embeddings
-- **pr_merged_qa_notify.json** – Uses Cohere Embeddings, OpenAI Chat, Pinecone
-- **issue_trello_card.json** – Uses Anthropic Claude, Cohere Embeddings, Supabase Vector
-- **voice_task_to_notion.json** – Uses OpenAI Chat, OpenAI Embeddings
-- **toggl_daily_report.json** – Uses Anthropic Claude, Cohere Embeddings, Pinecone
-- **calendar_to_clickup.json** – Uses OpenAI Chat, OpenAI Embeddings, Pinecone
-- **starred_slack_to_notion.json** – Uses Cohere Embeddings, OpenAI Chat
-- **birthday_telegram_reminder.json** – Uses OpenAI Chat, OpenAI Embeddings
-- **drink_water_reminder.json** – Uses OpenAI Chat, OpenAI Embeddings, Supabase Vector
-- **habit_form_weekly_summary.json** – Uses OpenAI Chat, OpenAI Embeddings, Supabase Vector
-- **weekly_notes_backup.json** – Uses Cohere Embeddings, OpenAI Chat
-- **calendar_event_auto-tag.json** – Uses OpenAI Chat, OpenAI Embeddings
-- **disaster_api_sms.json** – Uses Anthropic Claude, Cohere Embeddings, Supabase Vector
-- **survey_auto_analyze.json** – Uses OpenAI Chat, OpenAI Embeddings, Pinecone
-- **grant_application_routing.json** – Uses OpenAI Chat, OpenAI Embeddings, Supabase Vector
-- **idea_to_ig_carousel.json** – Uses Anthropic Claude, OpenAI Embeddings
-- **podcast_transcribe_publish.json** – Uses Anthropic Claude, Cohere Embeddings, Pinecone
-- **unsplash_to_pinterest.json** – Uses Cohere Embeddings, OpenAI Chat, Supabase Vector
-- **blog_comment_discord.json** – Uses Anthropic Claude, Cohere Embeddings, Supabase Vector
-- **record_crypto_prices.json** – Uses Anthropic Claude, Cohere Embeddings, Supabase Vector
-- **bank_sms_alert_to_telegram.json** – Uses Anthropic Claude, OpenAI Embeddings, Supabase Vector
+- **api_monitor_auto_restart.json**: This workflow monitors an API and automatically restarts it if it's down. It uses a webhook to trigger the workflow, splits the text, creates embeddings using OpenAI, and stores them in Weaviate. It then uses an OpenAI chat model to monitor the API and appends the results to a Google Sheet.
+- **api_stats_chart.json**: This workflow creates a chart of API stats. It uses a webhook to trigger the workflow, splits the text, creates embeddings using OpenAI, and stores them in Pinecone. It then uses an Anthropic chat model to create the chart and appends the results to a Google Sheet.
+- **applicant_feedback_folder.json**: This workflow creates a folder for applicant feedback. It uses a webhook to trigger the workflow, splits the text, creates embeddings using OpenAI, and stores them in Pinecone. It then uses an Anthropic chat model to create the folder and appends the results to a Google Sheet.
+- **assignment_sms_reminder.json**: This workflow sends an SMS reminder for an assignment. It uses a webhook to trigger the workflow, splits the text, creates embeddings using Cohere, and stores them in Weaviate. It then uses an OpenAI chat model to send the reminder and appends the results to a Google Sheet.
+- **bank_sms_alert_to_telegram.json**: This workflow sends a Telegram message for a bank SMS alert. It uses a webhook to trigger the workflow, splits the text, creates embeddings using OpenAI, and stores them in Supabase. It then uses an Anthropic chat model to send the message and appends the results to a Google Sheet.
+- **birthday_telegram_reminder.json**: This workflow sends a Telegram reminder for a birthday. It uses a webhook to trigger the workflow, splits the text, creates embeddings using OpenAI, and stores them in Weaviate. It then uses an OpenAI chat model to send the reminder and appends the results to a Google Sheet.
+- **blog_comment_discord.json**: This workflow sends a Discord message for a new blog comment. It uses a webhook to trigger the workflow, splits the text, creates embeddings using Cohere, and stores them in Supabase. It then uses an Anthropic chat model to send the message and appends the results to a Google Sheet.
+- **blood_test_email_alert.json**: This workflow sends an email alert for a blood test. It uses a webhook to trigger the workflow, splits the text, creates embeddings using OpenAI, and stores them in Supabase. It then uses an Anthropic chat model to send the alert and appends the results to a Google Sheet.
+- **calendar_event_auto-tag.json**: This workflow automatically tags calendar events. It uses a webhook to trigger the workflow, splits the text, creates embeddings using OpenAI, and stores them in Weaviate. It then uses an OpenAI chat model to tag the events and appends the results to a Google Sheet.
+- **calendar_to_clickup.json**: This workflow sends calendar events to ClickUp. It uses a webhook to trigger the workflow, splits the text, creates embeddings using OpenAI, and stores them in Pinecone. It then uses an OpenAI chat model to send the events and appends the results to a Google Sheet.
+- **course_completion_certificate.json**: This workflow generates a course completion certificate. It uses a webhook to trigger the workflow, splits the text, creates embeddings using OpenAI, and stores them in Supabase. It then uses an OpenAI chat model to generate the certificate and appends the results to a Google Sheet.
+- **crm_patient_intake.json**: This workflow intakes patients into a CRM. It uses a webhook to trigger the workflow, splits the text, creates embeddings using OpenAI, and stores them in Weaviate. It then uses an Anthropic chat model to intake the patients and appends the results to a Google Sheet.
+- **cron_success_slack.json**: This workflow sends a Slack message when a cron job succeeds. It uses a webhook to trigger the workflow, splits the text, creates embeddings using OpenAI, and stores them in Weaviate. It then uses an Anthropic chat model to send the message and appends the results to a Google Sheet.
+- **csv_attachment_to_airtable.json**: This workflow sends CSV attachments to Airtable. It uses a webhook to trigger the workflow, splits the text, creates embeddings using Cohere, and stores them in Pinecone. It then uses an Anthropic chat model to send the attachments and appends the results to a Google Sheet.
+- **customer_auto-tagging.json**: This workflow automatically tags customers. It uses a webhook to trigger the workflow, splits the text, creates embeddings using Cohere, and stores them in Pinecone. It then uses an OpenAI chat model to tag the customers and appends the results to a Google Sheet.
+- **disaster_api_sms.json**: This workflow sends an SMS from a disaster API. It uses a webhook to trigger the workflow, splits the text, creates embeddings using Cohere, and stores them in Supabase. It then uses an Anthropic chat model to send the SMS and appends the results to a Google Sheet.
+- **drink_water_reminder.json**: This workflow sends a reminder to drink water. It uses a webhook to trigger the workflow, splits the text, creates embeddings using OpenAI, and stores them in Supabase. It then uses an OpenAI chat model to send the reminder and appends the results to a Google Sheet.
+- **etsy_review_to_slack.json**: This workflow sends Etsy reviews to Slack. It uses a webhook to trigger the workflow, splits the text, creates embeddings using OpenAI, and stores them in Supabase. It then uses an OpenAI chat model to send the reviews and appends the results to a Google Sheet.
+- **fitness_api_weekly_report.json**: This workflow generates a weekly report from a fitness API. It uses a webhook to trigger the workflow, splits the text, creates embeddings using Cohere, and stores them in Supabase. It then uses an OpenAI chat model to generate the report and appends the results to a Google Sheet.
+- **ga_report_email.json**: This workflow sends a Google Analytics report via email. It uses a webhook to trigger the workflow, splits the text, creates embeddings using OpenAI, and stores them in Pinecone. It then uses an OpenAI chat model to send the report and appends the results to a Google Sheet.
+- **grant_application_routing.json**: This workflow routes grant applications. It uses a webhook to trigger the workflow, splits the text, creates embeddings using OpenAI, and stores them in Supabase. It then uses an OpenAI chat model to route the applications and appends the results to a Google Sheet.
+- **habit_form_weekly_summary.json**: This workflow generates a weekly summary of a habit form. It uses a webhook to trigger the workflow, splits the text, creates embeddings using OpenAI, and stores them in Supabase. It then uses an OpenAI chat model to generate the summary and appends the results to a Google Sheet.
+- **hourly_weather_log.json**: This workflow logs the hourly weather. It uses a webhook to trigger the workflow, splits the text, creates embeddings using Cohere, and stores them in Pinecone. It then uses an OpenAI chat model to log the weather and appends the results to a Google Sheet.
+- **idea_to_ig_carousel.json**: This workflow creates an Instagram carousel from an idea. It uses a webhook to trigger the workflow, splits the text, creates embeddings using OpenAI, and stores them in Weaviate. It then uses an Anthropic chat model to create the carousel and appends the results to a Google Sheet.
+- **interview_scheduler.json**: This workflow schedules interviews. It uses a webhook to trigger the workflow, splits the text, creates embeddings using OpenAI, and stores them in Weaviate. It then uses an OpenAI chat model to schedule the interviews and appends the results to a Google Sheet.
+- **issue_trello_card.json**: This workflow creates a Trello card for an issue. It uses a webhook to trigger the workflow, splits the text, creates embeddings using Cohere, and stores them in Supabase. It then uses an Anthropic chat model to create the card and appends the results to a Google Sheet.
+- **json_to_sheet.json**: This workflow sends JSON data to a Google Sheet. It uses a webhook to trigger the workflow, splits the text, creates embeddings using OpenAI, and stores them in Pinecone. It then uses an OpenAI chat model to send the data and appends the results to a Google Sheet.
+- **keyword_rank_checker.json**: This workflow checks keyword ranks. It uses a webhook to trigger the workflow, splits the text, creates embeddings using Cohere, and stores them in Pinecone. It then uses an OpenAI chat model to check the ranks and appends the results to a Google Sheet.
+- **low_stock_discord.json**: This workflow sends a Discord message for low stock. It uses a webhook to trigger the workflow, splits the text, creates embeddings using OpenAI, and stores them in Pinecone. It then uses an Anthropic chat model to send the message and appends the results to a Google Sheet.
+- **medication_sms_reminder.json**: This workflow sends an SMS reminder for medication. It uses a webhook to trigger the workflow, splits the text, creates embeddings using Cohere, and stores them in Supabase. It then uses an Anthropic chat model to send the reminder and appends the results to a Google Sheet.
+- **notion_api_update.json**: This workflow updates a Notion API. It uses a webhook to trigger the workflow, splits the text, creates embeddings using OpenAI, and stores them in Supabase. It then uses an Anthropic chat model to update the API and appends the results to a Google Sheet.
+- **onboarding_checklist_slack.json**: This workflow sends an onboarding checklist to Slack. It uses a webhook to trigger the workflow, splits the text, creates embeddings using OpenAI, and stores them in Supabase. It then uses an Anthropic chat model to send the checklist and appends the results to a Google Sheet.
+- **order_shipped_notification.json**: This workflow sends a notification when an order is shipped. It uses a webhook to trigger the workflow, splits the text, creates embeddings using OpenAI, and stores them in Supabase. It then uses an Anthropic chat model to send the notification and appends the results to a Google Sheet.
+- **podcast_transcribe_publish.json**: This workflow transcribes and publishes a podcast. It uses a webhook to trigger the workflow, splits the text, creates embeddings using Cohere, and stores them in Pinecone. It then uses an Anthropic chat model to transcribe and publish the podcast and appends the results to a Google Sheet.
+- **pr_merged_qa_notify.json**: This workflow sends a notification to QA when a PR is merged. It uses a webhook to trigger the workflow, splits the text, creates embeddings using Cohere, and stores them in Pinecone. It then uses an OpenAI chat model to send the notification and appends the results to a Google Sheet.
+- **price_update_google_sheet.json**: This workflow updates a Google Sheet with price updates. It uses a webhook to trigger the workflow, splits the text, creates embeddings using Cohere, and stores them in Weaviate. It then uses an OpenAI chat model to update the sheet and appends the results to a Google Sheet.
+- **record_crypto_prices.json**: This workflow records crypto prices. It uses a webhook to trigger the workflow, splits the text, creates embeddings using Cohere, and stores them in Supabase. It then uses an Anthropic chat model to record the prices and appends the results to a Google Sheet.
+- **return_ticket_assignment.json**: This workflow assigns return tickets. It uses a webhook to trigger the workflow, splits the text, creates embeddings using Cohere, and stores them in Supabase. It then uses an OpenAI chat model to assign the tickets and appends the results to a Google Sheet.
+- **rss_headlines_slack.json**: This workflow sends RSS headlines to Slack. It uses a webhook to trigger the workflow, splits the text, creates embeddings using Cohere, and stores them in Pinecone. It then uses an OpenAI chat model to send the headlines and appends the results to a Google Sheet.
+- **server_health_grafana.json**: This workflow sends server health data to Grafana. It uses a webhook to trigger the workflow, splits the text, creates embeddings using Cohere, and stores them in Weaviate. It then uses an Anthropic chat model to send the data and appends the results to a Google Sheet.
+- **starred_slack_to_notion.json**: This workflow sends starred Slack messages to Notion. It uses a webhook to trigger the workflow, splits the text, creates embeddings using Cohere, and stores them in Weaviate. It then uses an OpenAI chat model to send the messages and appends the results to a Google Sheet.
+- **survey_auto_analyze.json**: This workflow automatically analyzes surveys. It uses a webhook to trigger the workflow, splits the text, creates embeddings using OpenAI, and stores them in Pinecone. It then uses an OpenAI chat model to analyze the surveys and appends the results to a Google Sheet.
+- **toggl_daily_report.json**: This workflow generates a daily report from Toggl. It uses a webhook to trigger the workflow, splits the text, creates embeddings using Cohere, and stores them in Pinecone. It then uses an Anthropic chat model to generate the report and appends the results to a Google Sheet.
+- **unsplash_to_pinterest.json**: This workflow posts images from Unsplash to Pinterest. It uses a webhook to trigger the workflow, splits the text, creates embeddings using Cohere, and stores them in Supabase. It then uses an OpenAI chat model to post the images and appends the results to a Google Sheet.
+- **voice_task_to_notion.json**: This workflow sends voice tasks to Notion. It uses a webhook to trigger the workflow, splits the text, creates embeddings using OpenAI, and stores them in Weaviate. It then uses an OpenAI chat model to send the tasks and appends the results to a Google Sheet.
+- **weekly_notes_backup.json**: This workflow backs up weekly notes. It uses a webhook to trigger the workflow, splits the text, creates embeddings using Cohere, and stores them in Weaviate. It then uses an OpenAI chat model to back up the notes and appends the results to a Google Sheet.
+- **woo_order_mailchimp.json**: This workflow sends WooCommerce orders to Mailchimp. It uses a webhook to trigger the workflow, splits the text, creates embeddings using Cohere, and stores them in Weaviate. It then uses an OpenAI chat model to send the orders and appends the results to a Google Sheet.
+- **zoom_attendance_log.json**: This workflow logs Zoom attendance. It uses a webhook to trigger the workflow, splits the text, creates embeddings using OpenAI, and stores them in Supabase. It then uses an Anthropic chat model to log the attendance and appends the results to a Google Sheet.

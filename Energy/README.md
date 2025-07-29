@@ -1,11 +1,12 @@
 # Energy Templates
-- **solar_output_forecaster.json** – supabase/huggingface/anthropic
-- **grid_load_alert.json** – supabase/openai/anthropic
-- **fuel_price_monitor.json** – weaviate/huggingface/anthropic
-- **energy_consumption_anomaly_detector.json** – supabase/huggingface/huggingface
-- **carbon_footprint_estimator.json** – pinecone/openai/anthropic
-- **wind_farm_maintenance_scheduler.json** – weaviate/huggingface/openai
-- **battery_health_monitor.json** – redis/huggingface/huggingface
-- **ev_charging_station_locator.json** – supabase/huggingface/anthropic
-- **power_outage_sms.json** – weaviate/openai/openai
-- **renewable_incentive_tracker.json** – pinecone/huggingface/anthropic
+
+- **battery_health_monitor.json**: This workflow monitors battery health. It uses a webhook to trigger the workflow, splits the text, creates embeddings using Hugging Face, and stores them in Redis. It then uses a Hugging Face chat model to monitor the battery and appends the results to a Google Sheet.
+- **carbon_footprint_estimator.json**: This workflow estimates carbon footprints. It uses a webhook to trigger the workflow, splits the text, creates embeddings using OpenAI, and stores them in Pinecone. It then uses an Anthropic chat model to estimate the footprint and appends the results to a Google Sheet.
+- **energy_consumption_anomaly_detector.json**: This workflow detects anomalies in energy consumption. It uses a webhook to trigger the workflow, splits the text, creates embeddings using Hugging Face, and stores them in Supabase. It then uses a Hugging Face chat model to detect anomalies and appends the results to a Google Sheet.
+- **ev_charging_station_locator.json**: This workflow locates EV charging stations. It uses a webhook to trigger the workflow, splits the text, creates embeddings using Hugging Face, and stores them in Supabase. It then uses an Anthropic chat model to locate stations and appends the results to a Google Sheet.
+- **fuel_price_monitor.json**: This workflow monitors fuel prices. It uses a webhook to trigger the workflow, splits the text, creates embeddings using Hugging Face, and stores them in Weaviate. It then uses an Anthropic chat model to monitor prices and appends the results to a Google Sheet.
+- **grid_load_alert.json**: This workflow sends alerts for grid load. It uses a webhook to trigger the workflow, splits the text, creates embeddings using OpenAI, and stores them in Supabase. It then uses an Anthropic chat model to send alerts and appends the results to a Google Sheet.
+- **power_outage_sms.json**: This workflow sends SMS alerts for power outages. It uses a webhook to trigger the workflow, splits the text, creates embeddings using OpenAI, and stores them in Weaviate. It then uses an OpenAI chat model to send alerts and appends the results to a Google Sheet.
+- **renewable_incentive_tracker.json**: This workflow tracks renewable incentives. It uses a webhook to trigger the workflow, splits the text, creates embeddings using Hugging Face, and stores them in Pinecone. It then uses an Anthropic chat model to track incentives and appends the results to a Google Sheet.
+- **solar_output_forecaster.json**: This workflow forecasts solar output. It uses a webhook to trigger the workflow, splits the text, creates embeddings using Hugging Face, and stores them in Supabase. It then uses an Anthropic chat model to forecast output and appends the results to a Google Sheet.
+- **wind_farm_maintenance_scheduler.json**: This workflow schedules wind farm maintenance. It uses a webhook to trigger the workflow, splits the text, creates embeddings using Hugging Face, and stores them in Weaviate. It then uses an OpenAI chat model to schedule maintenance and appends the results to a Google Sheet.

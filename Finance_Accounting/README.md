@@ -1,10 +1,10 @@
-# Finance_Accounting Templates
+# Finance & Accounting Templates
 
-- **stripe_to_quickbooks.json** – Uses OpenAI Chat, OpenAI Embeddings, Supabase Vector
-- **ocr_receipts_to_notion.json** – Uses Anthropic Claude, OpenAI Embeddings, Supabase Vector
-- **weekly_shopify_sales_summary.json** – Uses Anthropic Claude, Cohere Embeddings, Pinecone
-- **currency_rate_monitor.json** – Uses OpenAI Chat, OpenAI Embeddings
-- **monthly_expense_report.json** – Uses Anthropic Claude, OpenAI Embeddings
-- **unpaid_invoice_reminder.json** – Uses Cohere Embeddings, OpenAI Chat
-- **paypal_to_airtable.json** – Uses OpenAI Chat, OpenAI Embeddings
-- **transaction_logs_backup.json** – Uses Cohere Embeddings, OpenAI Chat, Supabase Vector
+- **currency_rate_monitor.json**: This workflow monitors currency rates. It uses a webhook to trigger the workflow, splits the text, creates embeddings using OpenAI, and stores them in Weaviate. It then uses an OpenAI chat model to monitor the rates and appends the results to a Google Sheet.
+- **monthly_expense_report.json**: This workflow generates monthly expense reports. It uses a webhook to trigger the workflow, splits the text, creates embeddings using OpenAI, and stores them in Weaviate. It then uses an Anthropic chat model to generate the reports and appends the results to a Google Sheet.
+- **ocr_receipts_to_notion.json**: This workflow uses OCR to read receipts and save them to Notion. It uses a webhook to trigger the workflow, splits the text, creates embeddings using OpenAI, and stores them in Supabase. It then uses an Anthropic chat model to process the receipts and appends the results to a Google Sheet.
+- **paypal_to_airtable.json**: This workflow sends PayPal data to Airtable. It uses a webhook to trigger the workflow, splits the text, creates embeddings using OpenAI, and stores them in Weaviate. It then uses an OpenAI chat model to process the data and appends the results to a Google Sheet.
+- **stripe_to_quickbooks.json**: This workflow sends Stripe data to QuickBooks. It uses a webhook to trigger the workflow, splits the text, creates embeddings using OpenAI, and stores them in Supabase. It then uses an OpenAI chat model to process the data and appends the results to a Google Sheet.
+- **transaction_logs_backup.json**: This workflow backs up transaction logs. It uses a webhook to trigger the workflow, splits the text, creates embeddings using Cohere, and stores them in Supabase. It then uses an OpenAI chat model to back up the logs and appends the results to a Google Sheet.
+- **unpaid_invoice_reminder.json**: This workflow sends reminders for unpaid invoices. It uses a webhook to trigger the workflow, splits the text, creates embeddings using Cohere, and stores them in Weaviate. It then uses an OpenAI chat model to send the reminders and appends the results to a Google Sheet.
+- **weekly_shopify_sales_summary.json**: This workflow generates a weekly summary of Shopify sales. It uses a webhook to trigger the workflow, splits the text, creates embeddings using Cohere, and stores them in Pinecone. It then uses an Anthropic chat model to generate the summary and appends the results to a Google Sheet.
