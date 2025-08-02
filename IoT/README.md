@@ -1,11 +1,12 @@
 # IoT Templates
-- **sensor_fault_detector.json** – supabase/openai/huggingface
-- **smart_home_energy_saver.json** – supabase/cohere/huggingface
-- **iot_device_firmware_update_planner.json** – pinecone/huggingface/openai
-- **environmental_data_dashboard.json** – weaviate/openai/openai
-- **predictive_maintenance_alert.json** – weaviate/openai/openai
-- **edge_device_log_compressor.json** – redis/cohere/anthropic
-- **mqtt_topic_monitor.json** – redis/openai/huggingface
-- **ble_beacon_mapper.json** – pinecone/huggingface/openai
-- **industrial_iot_kpi_email.json** – redis/cohere/openai
-- **vehicle_telematics_analyzer.json** – redis/openai/huggingface
+
+- **ble_beacon_mapper.json**: This workflow maps BLE beacons. It uses a webhook to trigger the workflow, splits the text, creates embeddings using Hugging Face, and stores them in Pinecone. It then uses an OpenAI chat model to map the beacons and appends the results to a Google Sheet.
+- **edge_device_log_compressor.json**: This workflow compresses edge device logs. It uses a webhook to trigger the workflow, splits the text, creates embeddings using Cohere, and stores them in Redis. It then uses an Anthropic chat model to compress the logs and appends the results to a Google Sheet.
+- **environmental_data_dashboard.json**: This workflow creates an environmental data dashboard. It uses a webhook to trigger the workflow, splits the text, creates embeddings using OpenAI, and stores them in Weaviate. It then uses an OpenAI chat model to create the dashboard and appends the results to a Google Sheet.
+- **industrial_iot_kpi_email.json**: This workflow sends an email with industrial IoT KPIs. It uses a webhook to trigger the workflow, splits the text, creates embeddings using Cohere, and stores them in Redis. It then uses an OpenAI chat model to generate the email and appends the results to a Google Sheet.
+- **iot_device_firmware_update_planner.json**: This workflow plans firmware updates for IoT devices. It uses a webhook to trigger the workflow, splits the text, creates embeddings using Hugging Face, and stores them in Pinecone. It then uses an OpenAI chat model to plan the updates and appends the results to a Google Sheet.
+- **mqtt_topic_monitor.json**: This workflow monitors MQTT topics. It uses a webhook to trigger the workflow, splits the text, creates embeddings using OpenAI, and stores them in Redis. It then uses a Hugging Face chat model to monitor the topics and appends the results to a Google Sheet.
+- **predictive_maintenance_alert.json**: This workflow sends predictive maintenance alerts. It uses a webhook to trigger the workflow, splits the text, creates embeddings using OpenAI, and stores them in Weaviate. It then uses an OpenAI chat model to send the alerts and appends the results to a Google Sheet.
+- **sensor_fault_detector.json**: This workflow detects sensor faults. It uses a webhook to trigger the workflow, splits the text, creates embeddings using OpenAI, and stores them in Supabase. It then uses a Hugging Face chat model to detect the faults and appends the results to a Google Sheet.
+- **smart_home_energy_saver.json**: This workflow saves energy in a smart home. It uses a webhook to trigger the workflow, splits the text, creates embeddings using Cohere, and stores them in Supabase. It then uses a Hugging Face chat model to save energy and appends the results to a Google Sheet.
+- **vehicle_telematics_analyzer.json**: This workflow analyzes vehicle telematics. It uses a webhook to trigger the workflow, splits the text, creates embeddings using OpenAI, and stores them in Redis. It then uses a Hugging Face chat model to analyze the telematics and appends the results to a Google Sheet.

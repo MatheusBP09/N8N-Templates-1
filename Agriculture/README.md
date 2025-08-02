@@ -1,11 +1,12 @@
 # Agriculture Templates
-- **soil_nutrient_analysis.json** – weaviate/huggingface/huggingface
-- **crop_yield_predictor.json** – supabase/huggingface/openai
-- **pest_outbreak_alert.json** – pinecone/cohere/openai
-- **irrigation_schedule_optimizer.json** – pinecone/openai/huggingface
-- **farm_equipment_maintenance_reminder.json** – weaviate/openai/huggingface
-- **commodity_price_tracker.json** – redis/cohere/anthropic
-- **weather_impact_report.json** – supabase/huggingface/anthropic
-- **drone_image_crop_health.json** – supabase/openai/anthropic
-- **harvest_logbook.json** – pinecone/openai/huggingface
-- **greenhouse_climate_controller.json** – pinecone/huggingface/huggingface
+
+- **commodity_price_tracker.json**: This workflow tracks commodity prices. It uses a webhook to trigger the workflow, splits the text, creates embeddings using Cohere, and stores them in Redis. It then uses an Anthropic chat model to process the data and appends the results to a Google Sheet.
+- **crop_yield_predictor.json**: This workflow predicts crop yields. It uses a webhook to trigger the workflow, splits the text, creates embeddings using Hugging Face, and stores them in Supabase. It then uses an OpenAI chat model to predict crop yields and appends the results to a Google Sheet.
+- **drone_image_crop_health.json**: This workflow analyzes crop health from drone images. It uses a webhook to trigger the workflow, splits the text, creates embeddings using OpenAI, and stores them in Supabase. It then uses an Anthropic chat model to analyze the images and appends the results to a Google Sheet.
+- **farm_equipment_maintenance_reminder.json**: This workflow sends reminders for farm equipment maintenance. It uses a webhook to trigger the workflow, splits the text, creates embeddings using OpenAI, and stores them in Weaviate. It then uses a Hugging Face chat model to generate reminders and appends them to a Google Sheet.
+- **greenhouse_climate_controller.json**: This workflow controls the climate in a greenhouse. It uses a webhook to trigger the workflow, splits the text, creates embeddings using Hugging Face, and stores them in Pinecone. It then uses a Hugging Face chat model to control the climate and appends the results to a Google Sheet.
+- **harvest_logbook.json**: This workflow maintains a harvest logbook. It uses a webhook to trigger the workflow, splits the text, creates embeddings using OpenAI, and stores them in Pinecone. It then uses a Hugging Face chat model to manage the logbook and appends the results to a Google Sheet.
+- **irrigation_schedule_optimizer.json**: This workflow optimizes irrigation schedules. It uses a webhook to trigger the workflow, splits the text, creates embeddings using OpenAI, and stores them in Pinecone. It then uses a Hugging Face chat model to optimize the schedule and appends the results to a Google Sheet.
+- **pest_outbreak_alert.json**: This workflow sends alerts for pest outbreaks. It uses a webhook to trigger the workflow, splits the text, creates embeddings using Cohere, and stores them in Pinecone. It then uses an OpenAI chat model to send alerts and appends the results to a Google Sheet.
+- **soil_nutrient_analysis.json**: This workflow analyzes soil nutrients. It uses a webhook to trigger the workflow, splits the text, creates embeddings using Hugging Face, and stores them in Weaviate. It then uses a Hugging Face chat model to analyze the nutrients and appends the results to a Google Sheet.
+- **weather_impact_report.json**: This workflow generates weather impact reports. It uses a webhook to trigger the workflow, splits the text, creates embeddings using Hugging Face, and stores them in Supabase. It then uses an Anthropic chat model to generate reports and appends the results to a Google Sheet.

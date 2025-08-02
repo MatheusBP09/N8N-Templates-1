@@ -1,11 +1,12 @@
 # Automotive Templates
-- **vin_decoder.json** – redis/huggingface/huggingface
-- **ev_battery_degradation_report.json** – redis/cohere/openai
-- **connected_car_alert.json** – redis/openai/openai
-- **dealer_lead_qualifier.json** – pinecone/cohere/huggingface
-- **autonomous_vehicle_log_summarizer.json** – weaviate/huggingface/openai
-- **recall_notice_tracker.json** – pinecone/openai/anthropic
-- **fleet_fuel_efficiency_report.json** – weaviate/huggingface/anthropic
-- **ride‑share_surge_predictor.json** – supabase/cohere/anthropic
-- **adas_event_annotator.json** – supabase/cohere/openai
-- **car_insurance_quote_generator.json** – pinecone/huggingface/anthropic
+
+- **adas_event_annotator.json**: This workflow annotates ADAS events. It uses a webhook to trigger the workflow, splits the text, creates embeddings using Cohere, and stores them in Supabase. It then uses an OpenAI chat model to annotate the events and appends the results to a Google Sheet.
+- **autonomous_vehicle_log_summarizer.json**: This workflow summarizes autonomous vehicle logs. It uses a webhook to trigger the workflow, splits the text, creates embeddings using Hugging Face, and stores them in Weaviate. It then uses an OpenAI chat model to summarize the logs and appends the results to a Google Sheet.
+- **car_insurance_quote_generator.json**: This workflow generates car insurance quotes. It uses a webhook to trigger the workflow, splits the text, creates embeddings using Hugging Face, and stores them in Pinecone. It then uses an Anthropic chat model to generate quotes and appends the results to a Google Sheet.
+- **connected_car_alert.json**: This workflow sends alerts for connected cars. It uses a webhook to trigger the workflow, splits the text, creates embeddings using OpenAI, and stores them in Redis. It then uses an OpenAI chat model to send alerts and appends the results to a Google Sheet.
+- **dealer_lead_qualifier.json**: This workflow qualifies dealer leads. It uses a webhook to trigger the workflow, splits the text, creates embeddings using Cohere, and stores them in Pinecone. It then uses a Hugging Face chat model to qualify leads and appends the results to a Google Sheet.
+- **ev_battery_degradation_report.json**: This workflow generates EV battery degradation reports. It uses a webhook to trigger the workflow, splits the text, creates embeddings using Cohere, and stores them in Redis. It then uses an OpenAI chat model to generate reports and appends the results to a Google Sheet.
+- **fleet_fuel_efficiency_report.json**: This workflow generates fleet fuel efficiency reports. It uses a webhook to trigger the workflow, splits the text, creates embeddings using Hugging Face, and stores them in Weaviate. It then uses an Anthropic chat model to generate reports and appends the results to a Google Sheet.
+- **recall_notice_tracker.json**: This workflow tracks recall notices. It uses a webhook to trigger the workflow, splits the text, creates embeddings using OpenAI, and stores them in Pinecone. It then uses an Anthropic chat model to track notices and appends the results to a Google Sheet.
+- **ride‑share_surge_predictor.json**: This workflow predicts ride-share surges. It uses a webhook to trigger the workflow, splits the text, creates embeddings using Cohere, and stores them in Supabase. It then uses an Anthropic chat model to predict surges and appends the results to a Google Sheet.
+- **vin_decoder.json**: This workflow decodes VINs. It uses a webhook to trigger the workflow, splits the text, creates embeddings using Hugging Face, and stores them in Redis. It then uses a Hugging Face chat model to decode VINs and appends the results to a Google Sheet.

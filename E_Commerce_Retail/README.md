@@ -1,5 +1,5 @@
-# E_Commerce_Retail Templates
+# E-Commerce & Retail Templates
 
-- **shopify_order_sms.json** – Uses Anthropic Claude, Cohere Embeddings, Pinecone
-- **inventory_slack_alert.json** – Uses Cohere Embeddings, OpenAI Chat, Pinecone
-- **abandoned_cart_email.json** – Uses Cohere Embeddings, OpenAI Chat, Supabase Vector
+- **abandoned_cart_email.json**: This workflow sends an email to customers who have abandoned their shopping cart. It uses a webhook to trigger the workflow, splits the text, creates embeddings using Cohere, and stores them in Supabase. It then uses an OpenAI chat model to generate the email and appends the results to a Google Sheet.
+- **inventory_slack_alert.json**: This workflow sends a Slack alert when inventory is low. It uses a webhook to trigger the workflow, splits the text, creates embeddings using Cohere, and stores them in Pinecone. It then uses an OpenAI chat model to generate the alert and appends the results to a Google Sheet.
+- **shopify_order_sms.json**: This workflow sends an SMS to customers when their Shopify order is confirmed. It uses a webhook to trigger the workflow, splits the text, creates embeddings using Cohere, and stores them in Pinecone. It then uses an Anthropic chat model to generate the SMS and appends the results to a Google Sheet.

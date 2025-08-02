@@ -1,11 +1,12 @@
 # Travel Templates
-- **flight_price_drop_alert.json** – weaviate/openai/huggingface
-- **local_attraction_recommender.json** – pinecone/cohere/anthropic
-- **weather_packing_list_generator.json** – supabase/openai/anthropic
-- **visa_requirement_checker.json** – weaviate/cohere/anthropic
-- **hotel_review_sentiment.json** – pinecone/huggingface/huggingface
-- **travel_itinerary_builder.json** – supabase/cohere/openai
-- **currency_exchange_estimator.json** – weaviate/huggingface/huggingface
-- **airport_lounge_finder.json** – redis/cohere/huggingface
-- **travel_advisory_monitor.json** – pinecone/openai/anthropic
-- **road_trip_stop_planner.json** – supabase/cohere/anthropic
+
+- **airport_lounge_finder.json**: This workflow finds airport lounges. It uses a webhook to trigger the workflow, splits the text, creates embeddings using Cohere, and stores them in Redis. It then uses a Hugging Face chat model to find the lounges and appends the results to a Google Sheet.
+- **currency_exchange_estimator.json**: This workflow estimates currency exchange rates. It uses a webhook to trigger the workflow, splits the text, creates embeddings using Hugging Face, and stores them in Weaviate. It then uses a Hugging Face chat model to estimate the rates and appends the results to a Google Sheet.
+- **flight_price_drop_alert.json**: This workflow sends an alert when a flight price drops. It uses a webhook to trigger the workflow, splits the text, creates embeddings using OpenAI, and stores them in Weaviate. It then uses a Hugging Face chat model to send the alert and appends the results to a Google Sheet.
+- **hotel_review_sentiment.json**: This workflow analyzes hotel review sentiment. It uses a webhook to trigger the workflow, splits the text, creates embeddings using Hugging Face, and stores them in Pinecone. It then uses a Hugging Face chat model to analyze the sentiment and appends the results to a Google Sheet.
+- **local_attraction_recommender.json**: This workflow recommends local attractions. It uses a webhook to trigger the workflow, splits the text, creates embeddings using Cohere, and stores them in Pinecone. It then uses an Anthropic chat model to recommend attractions and appends the results to a Google Sheet.
+- **road_trip_stop_planner.json**: This workflow plans road trip stops. It uses a webhook to trigger the workflow, splits the text, creates embeddings using Cohere, and stores them in Supabase. It then uses an Anthropic chat model to plan the stops and appends the results to a Google Sheet.
+- **travel_advisory_monitor.json**: This workflow monitors travel advisories. It uses a webhook to trigger the workflow, splits the text, creates embeddings using OpenAI, and stores them in Pinecone. It then uses an Anthropic chat model to monitor the advisories and appends the results to a Google Sheet.
+- **travel_itinerary_builder.json**: This workflow builds a travel itinerary. It uses a webhook to trigger the workflow, splits the text, creates embeddings using Cohere, and stores them in Supabase. It then uses an OpenAI chat model to build the itinerary and appends the results to a Google Sheet.
+- **visa_requirement_checker.json**: This workflow checks visa requirements. It uses a webhook to trigger the workflow, splits the text, creates embeddings using Cohere, and stores them in Weaviate. It then uses an Anthropic chat model to check the requirements and appends the results to a Google Sheet.
+- **weather_packing_list_generator.json**: This workflow generates a packing list based on the weather. It uses a webhook to trigger the workflow, splits the text, creates embeddings using OpenAI, and stores them in Supabase. It then uses an Anthropic chat model to generate the list and appends the results to a Google Sheet.

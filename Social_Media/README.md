@@ -1,12 +1,12 @@
-# Social_Media Templates
+# Social Media Templates
 
-- **auto-post_blogs_to_linkedin_and_twitter.json** – Uses Anthropic Claude, OpenAI Embeddings, Supabase Vector
-- **schedule_instagram_content_from_airtable.json** – Uses Anthropic Claude, OpenAI Embeddings, Pinecone
-- **log_twitter_mentions_in_notion.json** – Uses Anthropic Claude, Cohere Embeddings
-- **cross-post_youtube_uploads_to_facebook.json** – Uses Anthropic Claude, OpenAI Embeddings, Pinecone
-- **alert_on_instagram_competitor_story.json** – Uses OpenAI Chat, OpenAI Embeddings, Supabase Vector
-- **auto-dm_new_twitter_followers.json** – Uses Cohere Embeddings, OpenAI Chat, Pinecone
-- **monthly_social_media_report.json** – Uses Anthropic Claude, OpenAI Embeddings
-- **reddit_upvote_alert.json** – Uses Anthropic Claude, OpenAI Embeddings
-- **auto-reply_to_tiktok_comments.json** – Uses Anthropic Claude, Cohere Embeddings, Pinecone
-- **youtube_comment_summarizer.json** – Uses OpenAI Chat, OpenAI Embeddings, Pinecone
+- **alert_on_instagram_competitor_story.json**: This workflow sends an alert when a competitor posts a story on Instagram. It uses a webhook to trigger the workflow, splits the text, creates embeddings using OpenAI, and stores them in Supabase. It then uses an OpenAI chat model to generate the alert and appends the results to a Google Sheet.
+- **auto-dm_new_twitter_followers.json**: This workflow automatically sends a direct message to new Twitter followers. It uses a webhook to trigger the workflow, splits the text, creates embeddings using Cohere, and stores them in Pinecone. It then uses an OpenAI chat model to generate the message and appends the results to a Google Sheet.
+- **auto-post_blogs_to_linkedin_and_twitter.json**: This workflow automatically posts blogs to LinkedIn and Twitter. It uses a webhook to trigger the workflow, splits the text, creates embeddings using OpenAI, and stores them in Supabase. It then uses an Anthropic chat model to post the blogs and appends the results to a Google Sheet.
+- **auto-reply_to_tiktok_comments.json**: This workflow automatically replies to TikTok comments. It uses a webhook to trigger the workflow, splits the text, creates embeddings using Cohere, and stores them in Pinecone. It then uses an Anthropic chat model to generate the replies and appends the results to a Google Sheet.
+- **cross-post_youtube_uploads_to_facebook.json**: This workflow cross-posts YouTube uploads to Facebook. It uses a webhook to trigger the workflow, splits the text, creates embeddings using OpenAI, and stores them in Pinecone. It then uses an Anthropic chat model to post the videos and appends the results to a Google Sheet.
+- **log_twitter_mentions_in_notion.json**: This workflow logs Twitter mentions in Notion. It uses a webhook to trigger the workflow, splits the text, creates embeddings using Cohere, and stores them in Weaviate. It then uses an Anthropic chat model to log the mentions and appends the results to a Google Sheet.
+- **monthly_social_media_report.json**: This workflow generates a monthly social media report. It uses a webhook to trigger the workflow, splits the text, creates embeddings using OpenAI, and stores them in Weaviate. It then uses an Anthropic chat model to generate the report and appends the results to a Google Sheet.
+- **reddit_upvote_alert.json**: This workflow sends an alert when a Reddit post gets a certain number of upvotes. It uses a webhook to trigger the workflow, splits the text, creates embeddings using OpenAI, and stores them in Weaviate. It then uses an Anthropic chat model to send the alert and appends the results to a Google Sheet.
+- **schedule_instagram_content_from_airtable.json**: This workflow schedules Instagram content from Airtable. It uses a webhook to trigger the workflow, splits the text, creates embeddings using OpenAI, and stores them in Pinecone. It then uses an Anthropic chat model to schedule the content and appends the results to a Google Sheet.
+- **youtube_comment_summarizer.json**: This workflow summarizes YouTube comments. It uses a webhook to trigger the workflow, splits the text, creates embeddings using OpenAI, and stores them in Pinecone. It then uses an OpenAI chat model to summarize the comments and appends the results to a Google Sheet.

@@ -1,11 +1,12 @@
-# Legal_Tech Templates
-- **contract_clause_extractor.json** – weaviate/cohere/openai
-- **case_law_summarizer.json** – supabase/cohere/openai
-- **nda_risk_detector.json** – redis/huggingface/openai
-- **trademark_status_monitor.json** – pinecone/huggingface/huggingface
-- **court_date_reminder.json** – supabase/cohere/openai
-- **compliance_checklist_builder.json** – pinecone/openai/huggingface
-- **legal_billing_analyzer.json** – redis/cohere/anthropic
-- **privacy_policy_generator.json** – redis/cohere/anthropic
-- **patent_abstract_summarizer.json** – supabase/openai/openai
-- **gdpr_violation_alert.json** – supabase/openai/huggingface
+# Legal Tech Templates
+
+- **case_law_summarizer.json**: This workflow summarizes case law. It uses a webhook to trigger the workflow, splits the text, creates embeddings using Cohere, and stores them in Supabase. It then uses an OpenAI chat model to summarize the case law and appends the results to a Google Sheet.
+- **compliance_checklist_builder.json**: This workflow builds a compliance checklist. It uses a webhook to trigger the workflow, splits the text, creates embeddings using OpenAI, and stores them in Pinecone. It then uses a Hugging Face chat model to build the checklist and appends the results to a Google Sheet.
+- **contract_clause_extractor.json**: This workflow extracts clauses from contracts. It uses a webhook to trigger the workflow, splits the text, creates embeddings using Cohere, and stores them in Weaviate. It then uses an OpenAI chat model to extract the clauses and appends the results to a Google Sheet.
+- **court_date_reminder.json**: This workflow sends court date reminders. It uses a webhook to trigger the workflow, splits the text, creates embeddings using Cohere, and stores them in Supabase. It then uses an OpenAI chat model to send the reminders and appends the results to a Google Sheet.
+- **gdpr_violation_alert.json**: This workflow sends alerts for GDPR violations. It uses a webhook to trigger the workflow, splits the text, creates embeddings using OpenAI, and stores them in Supabase. It then uses a Hugging Face chat model to send the alerts and appends the results to a Google Sheet.
+- **legal_billing_analyzer.json**: This workflow analyzes legal billing. It uses a webhook to trigger the workflow, splits the text, creates embeddings using Cohere, and stores them in Redis. It then uses an Anthropic chat model to analyze the billing and appends the results to a Google Sheet.
+- **nda_risk_detector.json**: This workflow detects risks in NDAs. It uses a webhook to trigger the workflow, splits the text, creates embeddings using Hugging Face, and stores them in Redis. It then uses an OpenAI chat model to detect the risks and appends the results to a Google Sheet.
+- **patent_abstract_summarizer.json**: This workflow summarizes patent abstracts. It uses a webhook to trigger the workflow, splits the text, creates embeddings using OpenAI, and stores them in Supabase. It then uses an OpenAI chat model to summarize the abstracts and appends the results to a Google Sheet.
+- **privacy_policy_generator.json**: This workflow generates privacy policies. It uses a webhook to trigger the workflow, splits the text, creates embeddings using Cohere, and stores them in Redis. It then uses an Anthropic chat model to generate the policies and appends the results to a Google Sheet.
+- **trademark_status_monitor.json**: This workflow monitors trademark statuses. It uses a webhook to trigger the workflow, splits the text, creates embeddings using Hugging Face, and stores them in Pinecone. It then uses a Hugging Face chat model to monitor the statuses and appends the results to a Google Sheet.

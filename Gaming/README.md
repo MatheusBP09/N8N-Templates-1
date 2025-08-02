@@ -1,11 +1,12 @@
 # Gaming Templates
-- **player_sentiment_dashboard.json** – supabase/huggingface/anthropic
-- **twitch_clip_highlights_script.json** – weaviate/cohere/huggingface
-- **in‑game_event_reminder.json** – supabase/openai/anthropic
-- **patch_note_summarizer.json** – weaviate/cohere/huggingface
-- **esports_match_alert.json** – weaviate/huggingface/openai
-- **loot‑box_probability_calculator.json** – pinecone/cohere/openai
-- **discord_guild_welcome_bot.json** – weaviate/openai/huggingface
-- **game_bug_triage.json** – redis/cohere/huggingface
-- **achievement_suggestion_engine.json** – supabase/huggingface/huggingface
-- **virtual_economy_price_tracker.json** – pinecone/cohere/huggingface
+
+- **achievement_suggestion_engine.json**: This workflow suggests achievements to players. It uses a webhook to trigger the workflow, splits the text, creates embeddings using Hugging Face, and stores them in Supabase. It then uses a Hugging Face chat model to suggest achievements and appends the results to a Google Sheet.
+- **discord_guild_welcome_bot.json**: This workflow welcomes new members to a Discord guild. It uses a webhook to trigger the workflow, splits the text, creates embeddings using OpenAI, and stores them in Weaviate. It then uses a Hugging Face chat model to welcome new members and appends the results to a Google Sheet.
+- **esports_match_alert.json**: This workflow sends alerts for eSports matches. It uses a webhook to trigger the workflow, splits the text, creates embeddings using Hugging Face, and stores them in Weaviate. It then uses an OpenAI chat model to send alerts and appends the results to a Google Sheet.
+- **game_bug_triage.json**: This workflow triages game bugs. It uses a webhook to trigger the workflow, splits the text, creates embeddings using Cohere, and stores them in Redis. It then uses a Hugging Face chat model to triage bugs and appends the results to a Google Sheet.
+- **in‑game_event_reminder.json**: This workflow sends reminders for in-game events. It uses a webhook to trigger the workflow, splits the text, creates embeddings using OpenAI, and stores them in Supabase. It then uses an Anthropic chat model to send reminders and appends the results to a Google Sheet.
+- **loot‑box_probability_calculator.json**: This workflow calculates the probability of getting a certain item from a loot box. It uses a webhook to trigger the workflow, splits the text, creates embeddings using Cohere, and stores them in Pinecone. It then uses an OpenAI chat model to calculate the probability and appends the results to a Google Sheet.
+- **patch_note_summarizer.json**: This workflow summarizes patch notes. It uses a webhook to trigger the workflow, splits the text, creates embeddings using Cohere, and stores them in Weaviate. It then uses a Hugging Face chat model to summarize the patch notes and appends the results to a Google Sheet.
+- **player_sentiment_dashboard.json**: This workflow creates a player sentiment dashboard. It uses a webhook to trigger the workflow, splits the text, creates embeddings using Hugging Face, and stores them in Supabase. It then uses an Anthropic chat model to create the dashboard and appends the results to a Google Sheet.
+- **twitch_clip_highlights_script.json**: This workflow creates a script for Twitch clip highlights. It uses a webhook to trigger the workflow, splits the text, creates embeddings using Cohere, and stores them in Weaviate. It then uses a Hugging Face chat model to create the script and appends the results to a Google Sheet.
+- **virtual_economy_price_tracker.json**: This workflow tracks prices in a virtual economy. It uses a webhook to trigger the workflow, splits the text, creates embeddings using Cohere, and stores them in Pinecone. It then uses a Hugging Face chat model to track the prices and appends the results to a Google Sheet.

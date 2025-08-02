@@ -1,12 +1,12 @@
-# AI_ML Templates
+# AI/ML Templates
 
-- **summarize_customer_emails.json** – Uses Anthropic Claude, Cohere Embeddings
-- **daily_content_ideas.json** – Uses Cohere Embeddings, OpenAI Chat, Supabase Vector
-- **translate_form_submissions.json** – Uses OpenAI Chat, OpenAI Embeddings, Supabase Vector
-- **resume_screening.json** – Uses Cohere Embeddings, OpenAI Chat
-- **auto-tag_blog_posts.json** – Uses Anthropic Claude, OpenAI Embeddings, Supabase Vector
-- **customer_sentiment_analysis.json** – Uses Anthropic Claude, Cohere Embeddings, Pinecone
-- **image_captioning.json** – Uses Anthropic Claude, OpenAI Embeddings
-- **ticket_urgency_classification.json** – Uses Anthropic Claude, Cohere Embeddings, Pinecone
-- **product_description_generator.json** – Uses Anthropic Claude, Cohere Embeddings, Pinecone
-- **voice_note_transcription.json** – Uses Cohere Embeddings, OpenAI Chat
+- **summarize_customer_emails.json**: This workflow summarizes customer emails. It uses a webhook to trigger the workflow, splits the text, creates embeddings using Cohere, and stores them in Weaviate. It then uses an Anthropic chat model to summarize emails and appends the summaries to a Google Sheet.
+- **daily_content_ideas.json**: This workflow generates daily content ideas. It uses a webhook to trigger the workflow, splits the text, creates embeddings using Cohere, and stores them in Supabase. It then uses an OpenAI chat model to generate content ideas and appends them to a Google Sheet.
+- **translate_form_submissions.json**: This workflow translates form submissions. It uses a webhook to trigger the workflow, splits the text, creates embeddings using OpenAI, and stores them in Supabase. It then uses an OpenAI chat model to translate the submissions and appends the translations to a Google Sheet.
+- **resume_screening.json**: This workflow screens resumes. It uses a webhook to trigger the workflow, splits the text, creates embeddings using Cohere, and stores them in Weaviate. It then uses an OpenAI chat model to screen resumes and appends the results to a Google Sheet.
+- **auto-tag_blog_posts.json**: This workflow automatically tags blog posts using AI. It uses a webhook to trigger the workflow, splits the text, creates embeddings using OpenAI, and stores them in Supabase. It then uses an Anthropic chat model to generate the tags and appends them to a Google Sheet.
+- **customer_sentiment_analysis.json**: This workflow analyzes customer sentiment. It uses a webhook to trigger the workflow, splits the text, creates embeddings using Cohere, and stores them in Pinecone. It then uses an Anthropic chat model to analyze the sentiment and appends the results to a Google Sheet.
+- **image_captioning.json**: This workflow generates captions for images. It uses a webhook to trigger the workflow, splits the text, creates embeddings using OpenAI, and stores them in Weaviate. It then uses an Anthropic chat model to generate captions and appends them to a Google Sheet.
+- **ticket_urgency_classification.json**: This workflow classifies the urgency of support tickets. It uses a webhook to trigger the workflow, splits the text, creates embeddings using Cohere, and stores them in Pinecone. It then uses an Anthropic chat model to classify ticket urgency and appends the results to a Google Sheet.
+- **product_description_generator.json**: This workflow generates product descriptions. It uses a webhook to trigger the workflow, splits the text, creates embeddings using Cohere, and stores them in Pinecone. It then uses an Anthropic chat model to generate product descriptions and appends them to a Google Sheet.
+- **voice_note_transcription.json**: This workflow transcribes voice notes. It uses a webhook to trigger the workflow, splits the text, creates embeddings using Cohere, and stores them in Weaviate. It then uses an OpenAI chat model to transcribe the voice notes and appends the transcriptions to a Google Sheet.

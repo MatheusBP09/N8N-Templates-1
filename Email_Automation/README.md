@@ -1,12 +1,12 @@
-# Email_Automation Templates
+# Email Automation Templates
 
-- **auto_reply_to_faqs.json** – Uses Anthropic Claude, Cohere Embeddings, Pinecone
-- **parse_invoice_emails.json** – Uses Anthropic Claude, OpenAI Embeddings
-- **auto_archive_promotions.json** – Uses OpenAI Chat, OpenAI Embeddings, Pinecone
-- **lead_to_hubspot.json** – Uses Anthropic Claude, Cohere Embeddings, Supabase Vector
-- **daily_email_digest.json** – Uses Anthropic Claude, OpenAI Embeddings, Supabase Vector
-- **mailchimp_campaign_tracking.json** – Uses Anthropic Claude, OpenAI Embeddings, Supabase Vector
-- **product_launch_email.json** – Uses Cohere Embeddings, OpenAI Chat, Supabase Vector
-- **forward_attachments.json** – Uses OpenAI Chat, OpenAI Embeddings, Pinecone
-- **sendgrid_bounce_alert.json** – Uses Anthropic Claude, OpenAI Embeddings
-- **follow-up_emails.json** – Uses Anthropic Claude, OpenAI Embeddings
+- **auto_archive_promotions.json**: This workflow automatically archives promotional emails. It uses a webhook to trigger the workflow, splits the text, creates embeddings using OpenAI, and stores them in Pinecone. It then uses an OpenAI chat model to process the emails and appends the results to a Google Sheet.
+- **auto_reply_to_faqs.json**: This workflow automatically replies to frequently asked questions. It uses a webhook to trigger the workflow, splits the text, creates embeddings using Cohere, and stores them in Pinecone. It then uses an Anthropic chat model to generate the replies and appends the results to a Google Sheet.
+- **daily_email_digest.json**: This workflow sends a daily digest of emails. It uses a webhook to trigger the workflow, splits the text, creates embeddings using OpenAI, and stores them in Supabase. It then uses an Anthropic chat model to generate the digest and appends the results to a Google Sheet.
+- **follow-up_emails.json**: This workflow sends follow-up emails. It uses a webhook to trigger the workflow, splits the text, creates embeddings using OpenAI, and stores them in Weaviate. It then uses an Anthropic chat model to generate the emails and appends the results to a Google Sheet.
+- **forward_attachments.json**: This workflow forwards email attachments. It uses a webhook to trigger the workflow, splits the text, creates embeddings using OpenAI, and stores them in Pinecone. It then uses an OpenAI chat model to process the attachments and appends the results to a Google Sheet.
+- **lead_to_hubspot.json**: This workflow adds leads to HubSpot. It uses a webhook to trigger the workflow, splits the text, creates embeddings using Cohere, and stores them in Supabase. It then uses an Anthropic chat model to process the leads and appends the results to a Google Sheet.
+- **mailchimp_campaign_tracking.json**: This workflow tracks Mailchimp campaigns. It uses a webhook to trigger the workflow, splits the text, creates embeddings using OpenAI, and stores them in Supabase. It then uses an Anthropic chat model to track the campaigns and appends the results to a Google Sheet.
+- **parse_invoice_emails.json**: This workflow parses invoice emails. It uses a webhook to trigger the workflow, splits the text, creates embeddings using OpenAI, and stores them in Weaviate. It then uses an Anthropic chat model to parse the emails and appends the results to a Google Sheet.
+- **product_launch_email.json**: This workflow sends product launch emails. It uses a webhook to trigger the workflow, splits the text, creates embeddings using Cohere, and stores them in Supabase. It then uses an OpenAI chat model to generate the emails and appends the results to a Google Sheet.
+- **sendgrid_bounce_alert.json**: This workflow sends an alert when a SendGrid email bounces. It uses a webhook to trigger the workflow, splits the text, creates embeddings using OpenAI, and stores them in Weaviate. It then uses an Anthropic chat model to generate the alert and appends the results to a Google Sheet.

@@ -1,11 +1,12 @@
 # Media Templates
-- **podcast_show_notes_generator.json** – supabase/cohere/openai
-- **tv_rating_trend_report.json** – redis/huggingface/huggingface
-- **breaking_news_summarizer.json** – weaviate/huggingface/openai
-- **ad_campaign_performance_alert.json** – pinecone/cohere/openai
-- **content_idea_brainstormer.json** – redis/openai/anthropic
-- **script_dialogue_analyzer.json** – pinecone/huggingface/openai
-- **music_playlist_mood_tagger.json** – redis/openai/openai
-- **live_stream_chat_moderator.json** – supabase/openai/anthropic
-- **social_buzz_heatmap.json** – supabase/openai/huggingface
-- **pr_crisis_detector.json** – redis/openai/huggingface
+
+- **ad_campaign_performance_alert.json**: This workflow sends an alert about ad campaign performance. It uses a webhook to trigger the workflow, splits the text, creates embeddings using Cohere, and stores them in Pinecone. It then uses an OpenAI chat model to generate the alert and appends the results to a Google Sheet.
+- **breaking_news_summarizer.json**: This workflow summarizes breaking news. It uses a webhook to trigger the workflow, splits the text, creates embeddings using Hugging Face, and stores them in Weaviate. It then uses an OpenAI chat model to summarize the news and appends the results to a Google Sheet.
+- **content_idea_brainstormer.json**: This workflow brainstorms content ideas. It uses a webhook to trigger the workflow, splits the text, creates embeddings using OpenAI, and stores them in Redis. It then uses an Anthropic chat model to brainstorm ideas and appends the results to a Google Sheet.
+- **live_stream_chat_moderator.json**: This workflow moderates a live stream chat. It uses a webhook to trigger the workflow, splits the text, creates embeddings using OpenAI, and stores them in Supabase. It then uses an Anthropic chat model to moderate the chat and appends the results to a Google Sheet.
+- **music_playlist_mood_tagger.json**: This workflow tags music playlists with moods. It uses a webhook to trigger the workflow, splits the text, creates embeddings using OpenAI, and stores them in Redis. It then uses an OpenAI chat model to tag the playlists and appends the results to a Google Sheet.
+- **podcast_show_notes_generator.json**: This workflow generates podcast show notes. It uses a webhook to trigger the workflow, splits the text, creates embeddings using Cohere, and stores them in Supabase. It then uses an OpenAI chat model to generate the show notes and appends the results to a Google Sheet.
+- **pr_crisis_detector.json**: This workflow detects PR crises. It uses a webhook to trigger the workflow, splits the text, creates embeddings using OpenAI, and stores them in Redis. It then uses a Hugging Face chat model to detect the crises and appends the results to a Google Sheet.
+- **script_dialogue_analyzer.json**: This workflow analyzes script dialogue. It uses a webhook to trigger the workflow, splits the text, creates embeddings using Hugging Face, and stores them in Pinecone. It then uses an OpenAI chat model to analyze the dialogue and appends the results to a Google Sheet.
+- **social_buzz_heatmap.json**: This workflow creates a social buzz heatmap. It uses a webhook to trigger the workflow, splits the text, creates embeddings using OpenAI, and stores them in Supabase. It then uses a Hugging Face chat model to create the heatmap and appends the results to a Google Sheet.
+- **tv_rating_trend_report.json**: This workflow generates a TV rating trend report. It uses a webhook to trigger the workflow, splits the text, creates embeddings using Hugging Face, and stores them in Redis. It then uses a Hugging Face chat model to generate the report and appends the results to a Google Sheet.
